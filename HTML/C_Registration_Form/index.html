@@ -10,61 +10,89 @@
     <form action="/process">
         <!-- primary required information -->
         <div> 
-            <label>First Name:* </label>
-            <input type="text" placeholder="First Name" required> <br>
+            <div>
+                <label>First Name:* </label>
+                <input type="text" placeholder="First Name" required>
+            </div>
 
-            <label>Last Name:* </label>
-            <input type="text" placeholder="Last Name" required> <br>
+            <div>
+                <label>Last Name:* </label>
+                <input type="text" placeholder="Last Name" required>
+            </div>
 
-            <label>Email Address:* </label>
-            <input type="email" placeholder="Email" required> <br>
+            <div>
+                <label>Email Address:* </label>
+                <input type="email" placeholder="Email" required>
+            </div>
 
-            <label>Password:* </label>
-            <input type="password" placeholder="Password" required> <br>
+            <div>
+                <label>Password:* </label>
+                <input type="password" placeholder="Password" required> <br>
+            </div>
 
-            <label>Confirm Password:* </label>
-            <input type="password" placeholder="Confirm Password" required> <br>
+            <div>
+                <label>Confirm Password:* </label>
+                <input type="password" placeholder="Confirm Password" required> <br>
+            </div>
         </div>
 
         <!-- Secondary non-required information -->
         <div>
             <!-- birthday date selection -->
-            <label>Birthday: </label>
-            <input type="date"> <br>
+            <div>
+                <label>Birthday: </label>
+                <input type="date">
+            </div>
 
             <!-- gender selection radio buttons -->
-            <label>Gender Identity: </label> <br>
-            <input type="radio" name="gender" id="male">
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="female">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" id="non_binary">
-            <label for="non_binary">Non-binary</label>
-            <input type="radio" name="gender" id="no_answer">
-            <label for="no_answer">I prefer not to answer</label> <br>
+            <div>
+                <label>Gender Identity: </label>
+            </div>
+
+            <div>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+    
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+    
+                <input type="radio" name="gender" id="non_binary">
+                <label for="non_binary">Non-binary</label>
+    
+                <input type="radio" name="gender" id="no_answer">
+                <label for="no_answer">I prefer not to answer</label>
+            </div>
 
             <!-- Self description textarea -->
-            <label for="description">A short description about yourself: </label> <br>
-            <textarea name="description" id="description" cols="30" rows="5"></textarea> <br>
+            <div>
+                <label for="description">A short description about yourself: </label>
+            </div>
+            <div>
+                <textarea name="description" id="description" cols="30" rows="5"></textarea>
+            </div>
 
             <!-- favorite coding language dropdown selection -->
-            <label for="language">Favorite Language: </label>
-            <select name="language" id="language">
-                <option value="javascript">JavaScript</option>
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="react">React</option>
-                <option value="python">Python</option>
-            </select> <br>
+            <div>
+                <label for="language">Favorite Language: </label>
+                <select name="language" id="language">
+                    <option value="javascript">JavaScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="react">React</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
             
             <!-- email updates checkbox -->
-            <input type="checkbox" name="email_updates" id="email_updates" checked>
-            <label for="email_updates">Yes, I would like to receive periodic email updates</label>
+            <div>
+                <input type="checkbox" name="email_updates" id="email_updates" checked>
+                <label for="email_updates">Yes, I would like to receive periodic email updates</label>
+            </div>
         </div>
 
         <!-- Create account button -->
         <div>
-            <button>Create Account</button>
+            <input type="submit" value="Create Account">
         </div>
 
         <p>* Indicates a required field</p>
