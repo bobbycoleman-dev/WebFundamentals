@@ -1,0 +1,64 @@
+
+
+/* Pride Flag */
+/* #pride {
+    display: inline-block;
+    width: 500px;
+    margin: auto;
+}
+#pride-red {
+    background-color: red;
+    height: 50px;
+}
+
+#pride-orange {
+    background-color: orange;
+    height: 50px;
+}
+
+#pride-yellow {
+    background-color: yellow;
+    height: 50px;
+}
+
+#pride-green {
+    background-color: green;
+    height: 50px;
+}
+
+#pride-blue {
+    background-color: blue;
+    height: 50px;
+}
+
+#pride-purple {
+    background-color: purple;
+    height: 50px;
+} */
+
+/* France Flag */
+#fance {
+    width: 500px;
+    height: 300;
+    margin: auto;
+}
+
+#france-red {
+    display: inline-block;
+    background-color: #002653;
+    height: 300px;
+}
+
+#france-white {
+    display: inline-block;
+    background-color: white;
+    height: 300px;
+}
+
+#france-blue {
+    display: inline-block;
+    background-color: red;
+    height: 300px;
+}
+
+
