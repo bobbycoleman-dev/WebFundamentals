@@ -4,6 +4,8 @@ body {
 
 h1 {
     color: blue;
+    margin: auto;
+    width: 300px;
 }
 
 /* div {
@@ -32,4 +34,17 @@ h1 {
 
 tr, th, td {
     border: black solid 2px;
+}
+
+img {
+    border: black 1px solid;
+    margin: 2px auto;
+    padding: 2px;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 12px;
+    width: 200px;
 }
