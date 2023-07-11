@@ -37,28 +37,34 @@
 } */
 
 /* France Flag */
+body {
+    background-color: black;
+}
 #fance {
     width: 500px;
-    height: 300;
-    margin: auto;
+    margin: 0px auto;
 }
 
 #france-red {
     display: inline-block;
     background-color: #002653;
-    height: 300px;
+    height: 350px;
+    width: 33%;
+    margin-left: -4px;
 }
 
 #france-white {
     display: inline-block;
     background-color: white;
-    height: 300px;
+    height: 350px;
+    width: 32%;
 }
 
 #france-blue {
     display: inline-block;
     background-color: red;
-    height: 300px;
+    height: 350px;
+    width: 32%;
 }
 
 
