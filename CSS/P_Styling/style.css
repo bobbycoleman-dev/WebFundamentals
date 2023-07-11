@@ -1,0 +1,31 @@
+* {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+h1 {
+    background-color: black;
+    color: white;
+    padding: 6px;
+    padding-left: 16px;
+}
+
+h1 span {
+    color: #05FFFF;
+}
+
+h2 {
+    background-color: #663399;
+    color: white;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    padding: 6px;
+}
+
+h3 {
+    background-color: #9FC5F8;
+    font-weight: normal;
+    text-align: right;
+    text-decoration: underline;
+    padding: 6px;
+    padding-right: 16px;
+}
