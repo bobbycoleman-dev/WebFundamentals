@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(246, 238, 238);
+}
+
+h1 {
+    color: blue;
+}
+
+/* div {
+    border: black 1px solid;
+} */
+
+/* #day-1 {
+    border: black 1px solid
+}
+
+#day-2 {
+    border: red 1px dashed;
+} */
+
+.day-style {
+    border: black solid 1px;
+}
+
+#requirements {
+    color: red
+}
+
+#strength {
+    color: red;
+}
+
+tr, th, td {
+    border: black solid 2px;
+}

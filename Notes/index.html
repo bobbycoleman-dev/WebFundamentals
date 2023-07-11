@@ -5,13 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bobby's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            color: aqua;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Web Fundamentals</h1>
 
     <h2>July 2023</h2>
-    <div id="day-1">
+    <div id="day-1" class="day-style">
         <h3>Day One</h3>
 
         <p>
@@ -22,7 +28,7 @@
             asperiores.
         </p>
 
-        <h4>Requirements</h4>
+        <h4 id="requirements">Requirements</h4>
         <!-- this is an unordered this -->
         <ul>
             <li>belt exams</li>
@@ -35,7 +41,7 @@
         <ol>
             <li>be present</li>
             <li>be humble</li>
-            <li>strength through struggle</li>
+            <li id="strength">strength through struggle</li>
         </ol>
 
         <h4>Anchor tag to link</h4>
@@ -45,7 +51,7 @@
         <h4>Image from file src</h4>
         <img src="./img/pronunciation.png" alt="pronunciation" />
 
-        <table border>
+        <table>
             <tr>
                 <th>assignment</th>
                 <th>priority</th>
@@ -54,64 +60,76 @@
             <tr>
                 <td>Push to GitHub</td>
                 <td>Practice</td>
-                <td><a href="https://login.codingdojo.com/m/201/7499/53122" target="_blank"
-                        rel="noopener noreferrer">link</a></td>
+                <td>
+                    <a href="https://login.codingdojo.com/m/201/7499/53122" target="_blank"
+                        rel="noopener noreferrer">link</a>
+                </td>
             </tr>
             <tr>
                 <td>Dictionary Entry</td>
                 <td>Practice</td>
-                <td><a href="https://login.codingdojo.com/m/201/7500/53128" target="_blank"
-                        rel="noopener noreferrer">link</a></td>
+                <td>
+                    <a href="https://login.codingdojo.com/m/201/7500/53128" target="_blank"
+                        rel="noopener noreferrer">link</a>
+                </td>
             </tr>
             <tr>
                 <td>Fix Indentation</td>
                 <td>Practice</td>
-                <td><a href="https://login.codingdojo.com/m/201/7500/53127" target="_blank"
-                        rel="noopener noreferrer">link</a></td>
+                <td>
+                    <a href="https://login.codingdojo.com/m/201/7500/53127" target="_blank"
+                        rel="noopener noreferrer">link</a>
+                </td>
             </tr>
             <tr>
                 <td>Registration Form</td>
                 <td>Core</td>
-                <td><a href="https://login.codingdojo.com/m/201/7500/53130" target="_blank"
-                        rel="noopener noreferrer">link</a></td>
+                <td>
+                    <a href="https://login.codingdojo.com/m/201/7500/53130" target="_blank"
+                        rel="noopener noreferrer">link</a>
+                </td>
             </tr>
             <tr>
                 <td>Portfolio Content</td>
                 <td>Practice</td>
-                <td><a href="https://login.codingdojo.com/m/201/7500/53135" target="_blank"
-                        rel="noopener noreferrer">link</a></td>
+                <td>
+                    <a href="https://login.codingdojo.com/m/201/7500/53135" target="_blank"
+                        rel="noopener noreferrer">link</a>
+                </td>
             </tr>
         </table>
 
         <h4>Forms</h4>
 
         <form action="/">
-            <div>
-                first name: <input type="text" name="first-name" id="">
-            </div>
+            <div>first name: <input type="text" name="first-name" id="" /></div>
             <div>
                 comments: <textarea name="text" id="" cols="30" rows="10"></textarea>
             </div>
-            <div>
-               password: <input type="password" name="password" id="">
-            </div>
-            <div>
-               birthday: <input type="date" name="birthday" id="">
-            </div>
-            <div>
-                choose a color: <input type="color" name="color" id="">
-            </div>
+            <div>password: <input type="password" name="password" id="" /></div>
+            <div>birthday: <input type="date" name="birthday" id="" /></div>
+            <div>choose a color: <input type="color" name="color" id="" /></div>
 
-            <input type="submit" value="send this stuff back">
+            <input type="submit" value="send this stuff back" />
         </form>
 
         <div id="videos">
-            <iframe width="400" height="200" src="https://www.youtube.com/embed/0hRPjiNTYJE" title="july_wf_001" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/0hRPjiNTYJE" title="july_wf_001"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
 
-            <iframe width="400" height="200" src="https://www.youtube.com/embed/MIi4KW2uvpc" title="july_wf_002" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/MIi4KW2uvpc" title="july_wf_002"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </div>
-
     </div>
+
+    <div id="day-2" class="day-style">
+        <a href="./about.html" target="_blank">About Page</a>
+    </div>
+
 </body>
 
 </html>
