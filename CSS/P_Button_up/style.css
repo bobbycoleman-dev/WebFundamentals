@@ -1,0 +1,31 @@
+button {
+    margin: 10px;
+}
+
+#search {
+    background-color: #F6F5F5;
+    color: #119B9D;
+    font-weight: bold;
+    padding: 4px 35px;
+    border: #119B9D 2px solid;
+    border-radius: 12px;
+}
+
+#add {
+    background-color: #02D1B2;
+    color: white;
+    border: 2px solid #02D1B2;
+    font-size: large;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+#create {
+    background-color: #2B78E4;
+    color: white;
+    border: black 2px solid;
+    padding: 4px 20px;
+    box-shadow: black 4px 4px;
+}
