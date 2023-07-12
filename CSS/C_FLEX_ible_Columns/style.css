@@ -6,9 +6,7 @@
 .row {
     display: flex;
     margin: 20px 0px;
-    justify-content: space-between;
     color: white;
-    text-align: center;
     gap: 20px;
 }
 
@@ -16,20 +14,26 @@
 .col {
     height: 50px;
     background-color: #64A3AB;
-    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
 }
 
 .col-2 {
     height: 50px;
     background-color: #64A3AB;
-    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 2;
 }
 
 .col-3 {
     height: 50px;
     background-color: #64A3AB;
-    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 3;
 }
