@@ -1,0 +1,32 @@
+* {
+    margin: 15px auto;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img {
+    height: 200px;
+}
+
+.block  {
+    height: 220px;
+    width: 660px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+#block1 {
+    background-color: darkgray;
+}
+
+#block2 {
+    background-color: darkgreen;
+}
+
+#block3 {
+    background-color: darkcyan;
+}
