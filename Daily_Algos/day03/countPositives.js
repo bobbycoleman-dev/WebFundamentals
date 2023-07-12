@@ -10,7 +10,7 @@ var numbers = [3, 4, -2, 7, 16, -8, 0];
 
 function countPositivesInArray (arrParam) {
     var countPositives = 0;
-    for(i=0; i<numbers.length; i++) {
+    for(i=0; i<arrParam.length; i++) {
         if (arrParam[i] > 0) {
             countPositives++
         }
