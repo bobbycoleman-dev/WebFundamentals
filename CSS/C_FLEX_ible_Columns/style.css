@@ -15,7 +15,6 @@
 
 .col {
     height: 50px;
-    width: 50px;
     background-color: #64A3AB;
     padding-top: 20px;
     flex: 1;
@@ -23,7 +22,6 @@
 
 .col-2 {
     height: 50px;
-    width: 50px;
     background-color: #64A3AB;
     padding-top: 20px;
     flex: 2;
@@ -31,7 +29,6 @@
 
 .col-3 {
     height: 50px;
-    width: 50px;
     background-color: #64A3AB;
     padding-top: 20px;
     flex: 3;
