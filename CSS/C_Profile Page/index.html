@@ -1,111 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Profile Page</title>
-    </head>
-    <body>
-        <div class="container">
-            <div id="nav-bar">
-                <div id="left-nav">
-                    <h1>Profile</h1>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#" class="active">My Profile</a></li>
-                        <li><a href="#">Find Connections</a></li>
-                    </ul>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="nav-bar">
+            <div id="left-nav">
+                <h1>Profile</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">My Profile</a></li>
+                    <li><a href="#">Find Connections</a></li>
+                </ul>
+            </div>
+
+            <div id="right-nav">
+                <button id="sign-out">Sign Out</button>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="col-1">
+                <!--* User Card-->
+                <div id="user-card">
+                    <!-- Top Decorative Bar -->
+                    <div id="top-bar"></div>
+
+                    <!-- Bottom Profile User Information -->
+                    <div id="profile-info" class="card-body">
+                        <!-- Profile Picture -->
+                        <div id="rel">
+                            <img src="./icons/user-circle.png" alt="profile-picture" id="profile-pic" />
+                        </div>
+
+                        <!-- About User Information -->
+                        <div id="about">
+                            <h1>Bobby Coleman</h1>
+
+                            <div class="icon-descriptor">
+                                <img src="./icons/map-marker.png" alt="map-marker" id="map-marker" />
+                                <h4>Temple, TX</h4>
+                            </div>
+
+                            <div>
+                                <p>Developer | Engineer | Problem Solver</p>
+                                <p>Master of shadows and the Internet!</p>
+                            </div>
+
+                            <div class="icon-descriptor">
+                                <img src="./icons/gear.png" alt="gear" id="gear" />
+                                <a href="#">edit profile</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="right-nav">
-                    <button id="sign-out">Sign Out</button>
+                <!--* Resume Card-->
+                <div id="resume" class="card-body">
+                    <div class="card-header">Education</div>
+                    <div id="resume-body">
+                        <p class="school">
+                            Coding Dojo - Full Stack Bootcamp
+                        </p>
+                        <p class="dates">Jul 2023 - Oct 2023</p>
+                        <p class="school-description">
+                            Triple balck belt in Python, JavaSCript, and
+                            C#/.NET
+                        </p>
+                        <hr />
+                        <p class="school">American Military University</p>
+                        <p class="dates">Oct 2018 - Aug 2020</p>
+                        <p class="school-description">
+                            Master of Business Administration with a
+                            concentration in Entrepreneurship
+                        </p>
+                        <hr />
+                        <p class="school">Norwich University</p>
+                        <p class="dates">Aug 2009 - May 2013</p>
+                        <p class="school-description">
+                            Bachelor of Science in Business Mangement
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div id="main">
-                <div id="col-1">
-
-                    <!--* User Card-->
-                    <div id="user-card">
-                        <!-- Top Decorative Bar -->
-                        <div id="top-bar"></div>
-
-                        <!-- Bottom Profile User Information -->
-                        <div id="profile-info" class="card-body">
-                            <!-- Profile Picture -->
-                            <div id="rel">
-                                <img
-                                    src="./icons/user-circle.png"
-                                    alt="profile-picture"
-                                    id="profile-pic"
-                                />
-                            </div>
-
-                            <!-- About User Information -->
-                            <div id="about">
-                                <h1>Bobby Coleman</h1>
-
-                                <div class="icon-descriptor">
-                                    <img
-                                        src="./icons/map-marker.png"
-                                        alt="map-marker"
-                                        id="map-marker"
-                                    />
-                                    <h4>Temple, TX</h4>
-                                </div>
-
-                                <div>
-                                    <p>Developer | Engineer | Problem Solver</p>
-                                    <p>Master of shadows and the Internet!</p>
-                                </div>
-
-                                <div class="icon-descriptor">
-                                    <img
-                                        src="./icons/gear.png"
-                                        alt="gear"
-                                        id="gear"
-                                    />
-                                    <a href="#">edit profile</a>
-                                </div>
-                            </div>
-                        </div>
+            <div id="col-2">
+                <div id="conn-req" class="card-body">
+                    <div class="card-header">
+                        <p class="connection-nums">2</p>
+                        Connection Requests
                     </div>
+                    <div>
+                        <div class="connection-body">
+                            <div class="img-name accept-deny">
+                                <a href="#" class="img-name">
+                                    <img src="./images/todd-s.jpg" alt="" />
+                                    Todd E
+                                </a>
+                                <div class="accept-deny-btn">
+                                    <img src="./icons/accept-circle.png" />
 
-                    <!--* Resume Card-->
-                    <div id="resume" class="card-body">
-                        <div class="card-header">Education</div>
-                        <div id="resume-body">
-                            <p class="school">Coding Dojo - Full Stack Bootcamp</p>
-                            <p class="dates">Jul 2023 - Oct 2023</p>
-                            <p class="school-description">Triple balck belt in Python, JavaSCript, and C#/.NET</p>
-                            <hr>
-                            <p class="school">American Military University</p>
-                            <p class="dates">Oct 2018 - Aug 2020</p>
-                            <p class="school-description">Master of Business Administration with a concentration in Entrepreneurship</p>
-                            <hr>
-                            <p class="school">Norwich University</p>
-                            <p class="dates">Aug 2009 - May 2013</p>
-                            <p class="school-description">Bachelor of Science in Business Mangement</p>
+                                    <img src="./icons/close-circle.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="img-name accept-deny">
+                                <a href="#" class="img-name">
+                                    <img src="./images/phil-s.jpg" alt="" />
+                                    Phil K
+                                </a>
+                                <div>
+                                    <img src="./icons/accept-circle.png" alt="" />
+                                    <img src="./icons/close-circle.png" alt="" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="col-2">
-                    <div id="conn-req" class="card-body">
-                        <div class="card-header">
-                            <p>2</p>
-                            Connection Requests
-                        </div>
+                <div id="connections" class="card-body">
+                    <div class="card-header">
+                        <p class="connection-nums">500+</p>
+                        Your Connections
                     </div>
-                    <div id="connections" class="card-body">
-                        <div class="card-header">
-                            <p>500+</p>
-                            Your Connections
-                        </div>
+                    <div class="connection-body">
+                        <a href="#" class="img-name">
+                            <img src="./images/adrien-s.jpg" alt="" />
+                            Adrien D
+                        </a>
+                        <a href="#" class="img-name">
+                            <img src="./images/anne-s.jpg" alt="" />
+                            Anne J
+                        </a>
+                        <a href="#" class="img-name">
+                            <img src="./images/alayne-s.jpg" alt="" />
+                            Alayne T
+                        </a>
+                        <a href="#" class="img-name">
+                            <img src="./images/arry-s.jpg" alt="" />
+                            Arry Y
+                        </a>
+                    </div>
+                    <div id="view-more">
+                        <a href="#" target="_blank" rel="noopener noreferrer">View More</a>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

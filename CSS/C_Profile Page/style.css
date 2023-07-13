@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 15%;
+    padding: 10px 10%;
 }
 
 #left-nav {
@@ -77,21 +77,20 @@ li a:hover {
     font-size: large;
     padding: 10px 20px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card-body {
     background-color: aliceblue;
     display: flex;
     border: 2px solid lightgrey;
-    /* border-left: 2px solid lightgrey;
-    border-bottom: 2px solid lightgrey;
-    border-right: 2px solid lightgrey; */
 }
 
 /** Column 1 */
 #main {
     display: flex;
-    margin: 0px 15%;
+    margin: 0px 10%;
     gap: 20px;
 }
 
@@ -134,8 +133,11 @@ li a:hover {
 
 #profile-pic {
     height: 100px;
+    border: white 3px solid;
+    border-radius: 50%;
+    box-shadow: #6d6d6d 1px 1px 2px 2px;
     position: absolute;
-    top: -50px;
+    top: -55px;
     left: 20px;
 }
 
@@ -181,18 +183,48 @@ li a:hover {
 
 
 /** Column 2 */
+
+.img-name img {
+    height: 25px;
+    border-radius: 50%;
+    border:black 1px solid;
+}
+
+.img-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.connection-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.connection-body a {
+    text-decoration: none;
+    color: black;
+}
+
+.accept-deny {
+    justify-content: space-between;
+}
+
 /** Connection Requests Card */
 #conn-req {
     width: inherit;
-    /* height: 300px; */
     margin: 50px auto;
     display: flex;
     flex-direction: column;
 }
 
-#conn-req p {
+.connection-nums {
     background-color: #CCCCCC;
     color: black;
+    font-size: medium;
+    padding: 2px;
     height: 25px;
     width: 25px;
     border: none;
@@ -200,14 +232,26 @@ li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-
+    margin-right: 5px; 
+}
+
+#conn-req p {
+    width: 25px;
 }
 
 /** Connections Card */
 #connections {
     width: inherit;
-    /* height: 300px; */
     margin: 50px auto;
     display: flex;
     flex-direction: column;
+}
+
+#connections p {
+    width: auto;
+}
+
+#view-more {
+    border-top: lightgrey 2px solid;
+    padding: 10px;
 }
