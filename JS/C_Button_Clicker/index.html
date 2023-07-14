@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dojonary</title>
+</head>
+
+<body>
+    <div id="view">
+        <div class="nav-bar flex">
+            <h1>Dojonary</h1>
+            <input type="text" placeholder="Search">
+            <button onclick="login(this)">Login</button>
+        </div>
+        <div class="main flex">
+            <div class="main-left flex column">
+                <div class="definition-box flex">
+                    <div class="box-left flex column">
+                        <h2>ninja</h2>
+                        <p class="italic">noun</p>
+                        <p>Plural: <span class="italic">ninjas</span></p>
+                        <button class="likes" onclick="alert('Ninja was liked')"><span>13</span> likes</button>
+                    </div>
+                    <div class="box-right flex">
+                        <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                    </div>
+                </div>
+                <div class="definition-box flex">
+                    <div class="box-left flex column">
+                        <h2>ninja</h2>
+                        <p class="italic">noun</p>
+                        <p>Plural: <span class="italic">ninjas</span></p>
+                        <button class="likes" onclick="alert('Ninja was liked')"><span>37</span> likes</button>
+                    </div>
+                    <div class="box-right flex">
+                        <p>A <span><a href="#">programmer</a></span> who breaks down problems with
+                            <span><a href="#">zen</a></span>-like
+                            focus
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="definition-box add-def-box flex column">
+                    <p>Dojonary is defined by YOU</p>
+                    <button class="add-def" onclick="removeButton(this)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
