@@ -35,7 +35,7 @@ var pizza4 = pizzaOven(
     ["basil", "sliced tomato", "roasted garlic"]
 );
 
-console.log(pizza1, pizza2, pizza3, pizza4);
+// console.log(pizza1, pizza2, pizza3, pizza4);
 
 function randomPizza() {
     var crustType = ["hand tossed", "thin crust", "deep dish", "stuffed crust"];
@@ -54,6 +54,12 @@ function randomPizza() {
 
     pizza.crustType = crustType[Math.floor(Math.random() * crustType.length)];
     pizza.sauceType = sauceType[Math.floor(Math.random() * sauceType.length)];
+
+    // TODO: Math.random() number 1-3 and 1-6
+    // var cheeseNum = Math.floor(Math.random() * 3);
+    // var toppingNum = Math.floor(Math.random() * 6);
+
+    // TODO: Select multiple cheeses and/or toppings with random cheese/topping num
     pizza.cheeses = cheeses[Math.floor(Math.random() * cheeses.length)];
     pizza.toppings = toppings[Math.floor(Math.random() * toppings.length)];
 
