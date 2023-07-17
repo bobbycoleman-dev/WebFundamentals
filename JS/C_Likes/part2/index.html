@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Like Part II</title>
+</head>
+
+<body>
+
+    <h1 class="nav-bar">Network</h1>
+    <h2 class="main-title">Your Feed</h2>
+    <div class="container flex column">
+        <div class="main flex">
+            <div class="main-left">
+
+                <!-- User Card -->
+                <div class="user-card flex column">
+                    <img src="user-circle.png" alt="">
+                    <a href="#">Add an avatar</a>
+                    <h3>James Doe</h3>
+                </div>
+
+            </div>
+            <div class="main-right flex column">
+
+                <!--* Neil M Post -->
+                <div class="user-post flex">
+                    <div class="user-post-top flex">
+                        <p class="username">Neil M</p>
+                        <p class="likes neilLikes"> 9 like(s)</p>
+                        <button class="like-btn" onclick="addNeilLike(this)">Like</button>
+                    </div>
+                    <p class="user-post-bottom">
+                        I just set up this new discord bot, let me know what you all think. <a href="#">link</a>
+                    </p>
+                </div>
+
+                <!--* Nichole K Post -->
+                <div class="user-post flex">
+                    <div class="user-post-top flex">
+                        <p class="username">Nichole K</p>
+                        <p class="likes nicholeLikes"> 12 like(s)</p>
+                        <button class="like-btn" onclick="addNicholeLike()">Like</button>
+                    </div>
+                    <p class="user-post-bottom">
+                        Just finished my <a href="#">next comic</a>, check ity out.
+                    </p>
+                </div>
+
+                <!--* Jim R Post -->
+                <div class="user-post flex">
+                    <div class="user-post-top flex">
+                        <p class="username">Jim R</p>
+                        <p class="likes jimLikes"> 9 like(s)</p>
+                        <button class="like-btn" onclick="addJimLike()">Like</button>
+                    </div>
+                    <p class="user-post-bottom">
+                        I can't stop listening to the <a href="#">new album</a>. Who else is liking it?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
