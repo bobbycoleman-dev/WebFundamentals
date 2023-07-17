@@ -141,6 +141,10 @@ li a:hover {
     left: 20px;
 }
 
+.user-name {
+    font-size: 30px;
+}
+
 .icon-descriptor {
     display: flex;
     align-items: center;
@@ -190,6 +194,12 @@ li a:hover {
     border:black 1px solid;
 }
 
+.new-todd {
+    height: 25px;
+    border-radius: 50%;
+    border:black 1px solid;
+}
+
 .img-name {
     display: flex;
     align-items: center;
@@ -224,7 +234,7 @@ li a:hover {
     background-color: #CCCCCC;
     color: black;
     font-size: medium;
-    padding: 2px;
+    padding: 4px;
     height: 25px;
     width: 25px;
     border: none;

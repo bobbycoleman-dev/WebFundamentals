@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Profile Page</title>
 </head>
 
@@ -43,7 +44,7 @@
 
                         <!-- About User Information -->
                         <div id="about">
-                            <h1>Bobby Coleman</h1>
+                            <h2 class="user-name">Bobby Coleman</h2>
 
                             <div class="icon-descriptor">
                                 <img src="./icons/map-marker.png" alt="map-marker" id="map-marker">
@@ -57,7 +58,7 @@
 
                             <div class="icon-descriptor">
                                 <img src="./icons/gear.png" alt="gear" id="gear">
-                                <a href="#">edit profile</a>
+                                <a href="#" onclick="changeUserName()">edit profile</a>
                             </div>
                         </div>
                     </div>
@@ -94,33 +95,34 @@
 
             <!--* Column 2 -->
             <div id="col-2">
+
                 <!-- Connection Requests Card -->
                 <div id="conn-req" class="card-body">
                     <div class="card-header">
-                        <p class="connection-nums">2</p>
+                        <p class="connection-nums connection-requests">2</p>
                         Connection Requests
                     </div>
                     <div>
                         <div class="connection-body">
-                            <div class="img-name accept-deny">
-                                <a href="#" class="img-name">
+                            <div class="img-name accept-deny todd-e">
+                                <a href="#" class="img-name todd-user">
                                     <img src="./images/todd-s.jpg" alt="">
                                     Todd E
                                 </a>
                                 <div class="accept-deny-btn">
-                                    <img src="./icons/accept-circle.png" alt="">
+                                    <img src="./icons/accept-circle.png" alt="" onclick="acceptConnectionTodd()">
 
-                                    <img src="./icons/close-circle.png" alt="">
+                                    <img src="./icons/close-circle.png" alt="" onclick="rejectConnectionTodd()">
                                 </div>
                             </div>
-                            <div class="img-name accept-deny">
-                                <a href="#" class="img-name">
+                            <div class="img-name accept-deny phil-k">
+                                <a href="#" class="img-name phil-user">
                                     <img src="./images/phil-s.jpg" alt="">
                                     Phil K
                                 </a>
                                 <div>
-                                    <img src="./icons/accept-circle.png" alt="">
-                                    <img src="./icons/close-circle.png" alt="">
+                                    <img src="./icons/accept-circle.png" alt="" onclick="acceptConnectionPhil()">
+                                    <img src="./icons/close-circle.png" alt="" onclick="rejectConnectionPhil()">
                                 </div>
                             </div>
                         </div>
@@ -130,10 +132,10 @@
                 <!-- Connections Card -->
                 <div id="connections" class="card-body">
                     <div class="card-header">
-                        <p class="connection-nums">500+</p>
+                        <p class="connection-nums connections-total">498</p>
                         Your Connections
                     </div>
-                    <div class="connection-body">
+                    <div id="connection-list" class="connection-body">
                         <a href="#" class="img-name">
                             <img src="./images/adrien-s.jpg" alt="">
                             Adrien D
