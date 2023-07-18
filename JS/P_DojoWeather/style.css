@@ -103,15 +103,14 @@ main {
 .cookie {
     display: flex;
     align-items: center;
-    min-width: 780px;
+    width: 780px;
     background-color: #EEEEEE;
     border: black 4px solid;
     padding: 10px;
     gap: 10px;
     position: absolute;
     bottom: 10px;
-    left: 10%;
-    right: 10%;
+    left: 15%;
 }
 
     .cookie-title {
