@@ -47,9 +47,7 @@ function changeDegreeType(element) {
 
         var min = document.getElementById("sat-min");
         min.innerText = convertToFer(min.innerText);
-    }
-
-    if (element.value == "cel") {
+    } else {
         // Today
         var max = document.getElementById("today-max");
         max.innerText = convertToCel(max.innerText);
