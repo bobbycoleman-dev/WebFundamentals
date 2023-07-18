@@ -15,6 +15,7 @@
     <nav>
         <h1>DojoWeather</h1>
         <ul>
+            <!-- TODO: Show alert when clicking on city name -->
             <li onclick="alert('Loading Burbank weather report...')">Burbank</li>
             <li onclick="alert('Loading Chicago weather report...')">Chicago</li>
             <li onclick="alert('Loading Dallas weather report...')">Dallas</li>
@@ -28,7 +29,7 @@
             <h2>San Jose</h2>
             <div class="top-right">
                 <p>show temperature in</p>
-                <select name="degrees" id="degrees" onchange="changeToFer(this)">
+                <select name="degrees" id="degrees" onchange="changeDegreeType(this)">
                     <option value="cel">°C</option>
                     <option value="fer">°F</option>
                 </select>

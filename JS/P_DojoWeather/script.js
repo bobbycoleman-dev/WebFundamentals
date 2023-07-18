@@ -1,19 +1,24 @@
+// TODO: Remove cookie element from the page when clicking accept button
 function acceptCookie() {
     var cookie = document.querySelector(".cookie");
     cookie.remove();
 }
 
+// TODO: Convert °F to °C when changing the select element
+// convert celsius to fahrenheit
 function convertToFer(cel) {
     var fer = Math.round(cel * (9 / 5) + 32);
     return fer;
 }
 
+// convert fahrenheit to celsius
 function convertToCel(fer) {
     var cel = Math.round((fer - 32) * (5 / 9));
     return cel;
 }
 
-function changeToFer(element) {
+// Take in each day's max and min temp and either convert to celsius or fahrenheit based on selected element value
+function changeDegreeType(element) {
     if (element.value == "fer") {
         // Today
         var max = document.getElementById("today-max");
