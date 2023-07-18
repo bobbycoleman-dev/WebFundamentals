@@ -12,8 +12,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    min-height: 100px;
+    padding: 10px 10%;
 }
 
     h1 {
