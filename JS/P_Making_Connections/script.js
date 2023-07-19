@@ -5,6 +5,18 @@ function changeUserName() {
     userName.innerText = "The Bearded Coder";
 }
 
+async function getCoder() {
+    var response = await fetch("https://api.github.com/users/bobbycoleman-dev");
+    var coderData = await response.json();
+    var avatar = coderData.avatar_url;
+    var gitName = coderData.login;
+
+    var profilePic = document.querySelector("#profile-pic");
+    var userName = document.querySelector(".user-name");
+    profilePic.src = avatar;
+    userName.innerText = gitName;
+}
+
 // TODO: Accept/Reject the user request
 
 var connectionRequestCount = 2;
