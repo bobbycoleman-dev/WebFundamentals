@@ -19,9 +19,7 @@ div.coin {
     background-position: center;
 }
 
-div.empty {
-
-}
+div.empty {}
 
 div.pacman {
     background-image: url("./assets/pacman.gif");
