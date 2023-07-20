@@ -1,8 +1,12 @@
 async function getCoder() {
     var response = await fetch("https://api.github.com/users/bobbycoleman-dev");
-    var coderData = await response.json();
-    var avatar = coderData.avatar_url;
-    console.log(coderData);
+
+    if (!response.ok) {
+        console.log("PROBLEM FETCHING DATA");
+    } else {
+        var coderData = await response.json();
+        console.log(coderData);
+    }
 }
 
 getCoder();
