@@ -15,8 +15,12 @@ div.brick {
 div.coin {
     background-image: url('./assets/coin.gif');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 10px;
     background-position: center;
+}
+
+div.empty {
+
 }
 
 div.pacman {
