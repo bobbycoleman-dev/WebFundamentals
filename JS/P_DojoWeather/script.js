@@ -19,17 +19,14 @@ function convertToCel(fer) {
 
 // Take in each day's max and min temp and either convert to celsius or fahrenheit based on selected element value
 function changeDegree(element) {
-    var maxTemp = document.querySelectorAll("#max");
-    var minTemp = document.querySelectorAll("#min");
+    var temp = document.querySelectorAll("#temp");
     if (element.value == "fer") {
-        for (var i = 0; i < maxTemp.length; i++) {
-            maxTemp[i].innerText = convertToFer(maxTemp[i].innerText);
-            minTemp[i].innerText = convertToFer(minTemp[i].innerText);
+        for (var i = 0; i < temp.length; i++) {
+            temp[i].innerText = convertToFer(temp[i].innerText);
         }
     } else {
-        for (var i = 0; i < maxTemp.length; i++) {
-            maxTemp[i].innerText = convertToCel(maxTemp[i].innerText);
-            minTemp[i].innerText = convertToCel(minTemp[i].innerText);
+        for (var i = 0; i < temp.length; i++) {
+            temp[i].innerText = convertToCel(temp[i].innerText);
         }
     }
 }
