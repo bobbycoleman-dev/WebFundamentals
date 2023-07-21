@@ -123,6 +123,7 @@ var world = [
 ];
 
 var score = 0;
+var coinCount = 0;
 var cherryCount = 0;
 var lifeCount = 3;
 var pacman = {
@@ -131,9 +132,11 @@ var pacman = {
 };
 var ghost = {
     x: 13,
-    y: 13
+    y: 10
 };
-
+var cherryDisplay =
+    "<div class='cherry-dark'></div><div class='cherry-dark'></div><div class='cherry-dark'></div>";
+document.getElementById("cherry-count").innerHTML = cherryDisplay;
 // ! DISPLAY THE WORLD
 function displayWorld() {
     var output = "";
@@ -182,27 +185,38 @@ function displayGhost() {
     document.getElementById("ghost").style.top = ghost.y * 20 + "px";
     document.getElementById("ghost").style.left = ghost.x * 20 + "px";
 
-    /*
-    Get list of possible directions = 8
-    Randomly choose a 1 or 0
-    Randomly increment or decrement x or y in those directions?
-    */
+    // Get list of possible directions
 
-    // setInterval(() => {
-    //     if (world[ghost.y][ghost.x + 1] != 2) {
-    //         ghost.x++;
-    //     } else if (world[ghost.y][ghost.x - 1] != 2) {
-    //         ghost.x--;
-    //     } else if (world[ghost.y - 1][ghost.x] != 2) {
-    //         ghost.y--;
-    //     } else if (world[ghost.y + 1][ghost.x] != 2) {
-    //         ghost.y++;
-    //     }
+    //Randomly increment or decrement x or y in those directions?
 
-    //     document.getElementById("ghost").style.top = ghost.y * 20 + "px";
-    //     document.getElementById("ghost").style.left = ghost.x * 20 + "px";
-    //     // console.log(ghost.x, ghost.y);
-    // }, 500);
+    setInterval(() => {
+        var newCoord = Math.round(Math.random()); // 0 or 1 -> which world location to go to
+        var randXY = Math.round(Math.random()); // 0 or 1 -> move either X or Y
+        var randXYDir = Math.round(Math.random()); // 0 or 1 -> move up/down or left/right
+
+        for (var i = ghost.y - 1; i <= ghost.y + 1; i++) {
+            for (var j = ghost.x - 1; j <= ghost.x + 1; j++) {
+                if (world[i][j] == newCoord) {
+                    if (randXY == 0 && randXYDir == 0) {
+                        // Y up
+                        ghost.y--;
+                    } else if (randXY == 0 && randXYDir == 1) {
+                        // Y down
+                        ghost.y++;
+                    } else if (randXY == 1 && randXYDir == 0) {
+                        // X right
+                        ghost.x++;
+                    } else if (randXY == 1 && randXYDir == 1) {
+                        // X left
+                        ghost.x--;
+                    }
+                }
+            }
+        }
+
+        document.getElementById("ghost").style.top = ghost.y * 20 + "px";
+        document.getElementById("ghost").style.left = ghost.x * 20 + "px";
+    }, 500);
 }
 
 // ! DISPLAY THE CHERRIES
@@ -264,9 +278,10 @@ function displayLifeCount() {
             "<div id='pacman-life'></div><div id='pacman-life'></div><div id='pacman-life'></div>";
     } else if (lifeCount == 2) {
         lifeOutput +=
-            "<div id='pacman-life'></div><div id='pacman-life'></div>";
+            "<div id='pacman-life'></div><div id='pacman-life'></div><div id='pacman-life-dark'></div>";
     } else if (lifeCount == 1) {
-        lifeOutput += "<div id='pacman-life'></div>";
+        lifeOutput +=
+            "<div id='pacman-life'></div><div id='pacman-life-dark'></div><div id='pacman-life-dark'></div>";
     } else {
         lifeOutput = "";
     }
@@ -316,15 +331,17 @@ document.onkeydown = function (e) {
         score += 50;
         cherryCount++;
         if (cherryCount == 3) {
-            output +=
+            cherryDisplay =
                 "<div id='cherry'></div><div id='cherry'></div><div id='cherry'></div>";
         } else if (cherryCount == 2) {
-            output += "<div id='cherry'></div><div id='cherry'></div>";
-        } else {
-            output += "<div id='cherry'></div>";
+            cherryDisplay =
+                "<div id='cherry'></div><div id='cherry'></div><div class='cherry-dark'></div>";
+        } else if (cherryCount == 1) {
+            cherryDisplay =
+                "<div id='cherry'></div><div class='cherry-dark'></div><div class='cherry-dark'></div>";
         }
 
-        document.getElementById("cherry-count").innerHTML = output;
+        document.getElementById("cherry-count").innerHTML = cherryDisplay;
         displayScore();
         displayWorld();
     }
@@ -337,6 +354,7 @@ document.onkeydown = function (e) {
         pacmanDirection.style.transform = "rotate(360deg)";
         // Subtract a Life
         lifeCount--;
+        displayPacman();
         displayLifeCount();
     }
 

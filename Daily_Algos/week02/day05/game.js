@@ -8,7 +8,7 @@ var theDojo = [
     [0, 0, 0, 0, 5, 0, 1, 2, 0, 6],
     [2, 2, 2, 2, 0, 7, 1, 1, 1, 0],
     [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],
-    [9, 2, 2, 2, 0, 7, 0, 1, 1, 0],
+    [9, 2, 2, 2, 0, 7, 0, 1, 1, 0]
 ];
 var dojoDiv = document.querySelector("#the-dojo");
 
@@ -28,32 +28,42 @@ function render(theDojo) {
 //        Use i and j as the indexes to check theDojo.
 function howMany(i, j, element) {
     console.log(i, j);
-    var sum = 0;
-    var ul = theDojo[i - 1][j - 1];
-    var um = theDojo[i - 1][j];
-    var ur = theDojo[i - 1][j + 1];
-    var rm = theDojo[i][j + 1];
-    var br = theDojo[i + 1][j + 1];
-    var bm = theDojo[i + 1][j];
-    var bl = theDojo[i + 1][j - 1];
-    var lm = theDojo[i][j - 1];
 
-    if (i == 0 && j == 0) {
-        sum = rm + br + bm;
-    } else if (i == 9 && j == 9) {
-        sum = um + ur + rm;
-    } else if (i == 0) {
-        sum = um + ur + rm + br + bm;
-    } else if (j == 0) {
-        sum = rm + br + bm + bl + lm;
-    } else if (i == 9) {
-        sum = lm + ul + um + ur + rm;
-    } else if (j == 9) {
-        sum = bm + bl + lm + ul + um;
-    } else {
-        sum = ul + um + ur + rm + br + bm + bl + lm;
+    var sum = 0;
+    for (var k = i - 1; k <= i + 1; k++) {
+        for (var l = j - 1; l <= j + 1; l++) {
+            sum += theDojo[k][l];
+        }
     }
+    sum -= theDojo[i][j];
     console.log(sum);
+
+    // var sum = 0;
+    // var ul = theDojo[i - 1][j - 1];
+    // var um = theDojo[i - 1][j];
+    // var ur = theDojo[i - 1][j + 1];
+    // var rm = theDojo[i][j + 1];
+    // var br = theDojo[i + 1][j + 1];
+    // var bm = theDojo[i + 1][j];
+    // var bl = theDojo[i + 1][j - 1];
+    // var lm = theDojo[i][j - 1];
+
+    // if (i == 0 && j == 0) {
+    //     sum = rm + br + bm;
+    // } else if (i == 9 && j == 9) {
+    //     sum = um + ur + rm;
+    // } else if (i == 0) {
+    //     sum = um + ur + rm + br + bm;
+    // } else if (j == 0) {
+    //     sum = rm + br + bm + bl + lm;
+    // } else if (i == 9) {
+    //     sum = lm + ul + um + ur + rm;
+    // } else if (j == 9) {
+    //     sum = bm + bl + lm + ul + um;
+    // } else {
+    //     sum = ul + um + ur + rm + br + bm + bl + lm;
+    // }
+    // console.log(sum);
     // alert("TODO - determine how many ninjas are hiding in adjacent squares");
 }
 
