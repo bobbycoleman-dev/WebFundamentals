@@ -27,6 +27,7 @@ function render(theDojo) {
 //        under the adjacent (all sides and corners) squares.
 //        Use i and j as the indexes to check theDojo.
 function howMany(i, j, element) {
+    console.log(i, j);
     var sum = 0;
     var ul = theDojo[i - 1][j - 1];
     var um = theDojo[i - 1][j];
@@ -37,35 +38,22 @@ function howMany(i, j, element) {
     var bl = theDojo[i + 1][j - 1];
     var lm = theDojo[i][j - 1];
 
-    sum = ul + um + ur + rm + br + bm + bl + lm;
+    if (i == 0 && j == 0) {
+        sum = rm + br + bm;
+    } else if (i == 9 && j == 9) {
+        sum = um + ur + rm;
+    } else if (i == 0) {
+        sum = um + ur + rm + br + bm;
+    } else if (j == 0) {
+        sum = rm + br + bm + bl + lm;
+    } else if (i == 9) {
+        sum = lm + ul + um + ur + rm;
+    } else if (j == 9) {
+        sum = bm + bl + lm + ul + um;
+    } else {
+        sum = ul + um + ur + rm + br + bm + bl + lm;
+    }
     console.log(sum);
-
-    // if (ul) {
-    //     sum += ul;
-    // }
-
-    // if (um) {
-    //     sum += um;
-    // }
-    // if (ur) {
-    //     sum += ur;
-    // }
-    // if (rm) {
-    //     sum += rm;
-    // }
-    // if (br) {
-    //     sum += br;
-    // }
-    // if (bm) {
-    //     sum += bm;
-    // }
-    // if (bl) {
-    //     sum += bl;
-    // }
-    // if (lm) {
-    //     sum += lm;
-    // }
-
     // alert("TODO - determine how many ninjas are hiding in adjacent squares");
 }
 
@@ -78,9 +66,9 @@ function howMany(i, j, element) {
 // start the game
 // message to greet a user of the game
 var style = "color:cyan;font-size:1.5rem;font-weight:bold;";
-console.log("%c" + "IF YOU ARE A DOJO STUDENT...", style);
-console.log("%c" + "GOOD LUCK THIS IS A CHALLENGE!", style);
+// console.log("%c" + "IF YOU ARE A DOJO STUDENT...", style);
+// console.log("%c" + "GOOD LUCK THIS IS A CHALLENGE!", style);
 // shows the dojo for debugging purposes
-console.table(theDojo);
+// console.table(theDojo);
 // adds the rows of buttons into <div id="the-dojo"></div>
 dojoDiv.innerHTML = render(theDojo);
