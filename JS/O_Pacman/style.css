@@ -46,6 +46,16 @@ div.empty {
     position: absolute;
 }
 
+#ghost {
+    background-image: url("./assets/green-ghost.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
 #pacman-life {
     background-image: url("./assets/pacman.gif");
     background-repeat: no-repeat;

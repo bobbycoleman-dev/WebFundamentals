@@ -124,8 +124,13 @@ var world = [
 
 var score = 0;
 var cherryCount = 0;
+var lifeCount = 3;
 var pacman = {
     x: 2,
+    y: 13,
+};
+var ghost = {
+    x: 13,
     y: 13,
 };
 
@@ -144,6 +149,8 @@ function displayWorld() {
                 output += "<div class='empty'></div>";
             } else if (world[i][j] == 3) {
                 output += "<div id='cherry'></div>";
+            } else if (world[i][j] == 4) {
+                output += "<div id='ghost'></div>";
             }
         }
         output += "</div>";
@@ -168,6 +175,12 @@ function displayPacman() {
         document.getElementById("pacman").style.top = pacman.y * 20 + "px";
         document.getElementById("pacman").style.left = pacman.x * 20 + "px";
     }
+}
+
+// ! DISPLAY GHOST
+function displayGhost() {
+    document.getElementById("ghost").style.top = ghost.y * 20 + "px";
+    document.getElementById("ghost").style.left = ghost.x * 20 + "px";
 }
 
 // ! DISPLAY THE CHERRIES
@@ -224,12 +237,14 @@ displayCherry();
 displayWorld();
 displayPacman();
 displayScore();
+displayGhost();
 
 // ! MOVEMENT / COLLISION DETECTION / COIN & CHERRY EATING
 document.onkeydown = function (e) {
     var output = "";
     var pacmanDirection = document.getElementById("pacman");
 
+    //* MOVEMENT & WALL COLLISION DETECTION
     if (e.key == "ArrowRight" && world[pacman.y][pacman.x + 1] != 2) {
         pacman.x++;
         pacmanDirection.style.transform = "rotate(360deg)";
@@ -244,6 +259,7 @@ document.onkeydown = function (e) {
         pacmanDirection.style.transform = "rotate(90deg)";
     }
 
+    //* COIN COLLECTION
     if (world[pacman.y][pacman.x] == 1) {
         world[pacman.y][pacman.x] = 0;
         score += 10;
@@ -251,6 +267,7 @@ document.onkeydown = function (e) {
         displayWorld();
     }
 
+    //* CHERRY COLLECTION
     if (world[pacman.y][pacman.x] == 3) {
         world[pacman.y][pacman.x] = 0;
         score += 50;
@@ -267,6 +284,14 @@ document.onkeydown = function (e) {
         document.getElementById("cherry-count").innerHTML = output;
         displayScore();
         displayWorld();
+    }
+
+    //* GHOST COLLISION & LOSS OF LIFE
+    if (pacman.x == ghost.x && pacman.y == ghost.y) {
+        pacman.x = 2;
+        pacman.y = 13;
+        pacmanDirection.style.transform = "rotate(360deg)";
+        lifeCount--;
     }
 
     // console.log(e.key);
