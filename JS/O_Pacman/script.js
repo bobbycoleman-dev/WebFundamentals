@@ -6,120 +6,120 @@
 var world = [
     [
         2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-        2, 2, 2, 2,
+        2, 2, 2, 2
     ],
     [
         2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
         2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 2, 2,
+        2, 2, 2, 2
     ],
     [
         0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1, 2, 2,
-        0, 0, 0, 0,
+        0, 0, 0, 0
     ],
     [
         0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0, 2, 2, 1, 2, 2,
-        0, 0, 0, 0,
+        0, 0, 0, 0
     ],
     [
         2, 2, 2, 2, 2, 2, 1, 2, 2, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 1, 2, 2,
-        2, 2, 2, 2,
+        2, 2, 2, 2
     ],
     [
         0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0,
-        0, 0, 0, 0,
+        0, 0, 0, 0
     ],
     [
         2, 2, 2, 2, 2, 2, 1, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 1, 2, 2,
-        2, 2, 2, 2,
+        2, 2, 2, 2
     ],
     [
         0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1, 2, 2,
-        0, 0, 0, 0,
+        0, 0, 0, 0
     ],
     [
         0, 0, 0, 0, 0, 2, 1, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 1, 2, 2,
-        0, 0, 0, 0,
+        0, 0, 0, 0
     ],
     [
         2, 2, 2, 2, 2, 2, 1, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 1, 2, 2,
-        2, 2, 2, 2,
+        2, 2, 2, 2
     ],
     [
         2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
         2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2,
-        1, 2, 2, 2,
+        1, 2, 2, 2
     ],
     [
         2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2,
-        1, 2, 2, 2,
+        1, 2, 2, 2
     ],
     [
         2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
-        2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
+        2, 2, 1, 2
     ],
     [
-        2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
-        2, 2, 1, 2,
+        2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2,
+        2, 2, 1, 2
     ],
     [
         2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 2,
+        1, 1, 1, 2
     ],
     [
         2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-        2, 2, 2, 2,
-    ],
+        2, 2, 2, 2
+    ]
 ];
 
 var score = 0;
@@ -127,11 +127,11 @@ var cherryCount = 0;
 var lifeCount = 3;
 var pacman = {
     x: 2,
-    y: 13,
+    y: 13
 };
 var ghost = {
     x: 13,
-    y: 13,
+    y: 13
 };
 
 // ! DISPLAY THE WORLD
@@ -155,7 +155,6 @@ function displayWorld() {
         }
         output += "</div>";
     }
-    // console.log(output);
     document.getElementById("world").innerHTML = output;
 }
 
@@ -164,6 +163,7 @@ function displayPacman() {
     document.getElementById("pacman").style.top = pacman.y * 20 + "px";
     document.getElementById("pacman").style.left = pacman.x * 20 + "px";
 
+    // Left & Right World Wrap
     if (pacman.y == 13 && pacman.x == 0) {
         pacman.x = 27;
         pacman.y = 13;
@@ -181,6 +181,28 @@ function displayPacman() {
 function displayGhost() {
     document.getElementById("ghost").style.top = ghost.y * 20 + "px";
     document.getElementById("ghost").style.left = ghost.x * 20 + "px";
+
+    /*
+    Get list of possible directions = 8
+    Randomly choose a 1 or 0
+    Randomly increment or decrement x or y in those directions?
+    */
+
+    // setInterval(() => {
+    //     if (world[ghost.y][ghost.x + 1] != 2) {
+    //         ghost.x++;
+    //     } else if (world[ghost.y][ghost.x - 1] != 2) {
+    //         ghost.x--;
+    //     } else if (world[ghost.y - 1][ghost.x] != 2) {
+    //         ghost.y--;
+    //     } else if (world[ghost.y + 1][ghost.x] != 2) {
+    //         ghost.y++;
+    //     }
+
+    //     document.getElementById("ghost").style.top = ghost.y * 20 + "px";
+    //     document.getElementById("ghost").style.left = ghost.x * 20 + "px";
+    //     // console.log(ghost.x, ghost.y);
+    // }, 500);
 }
 
 // ! DISPLAY THE CHERRIES
@@ -189,6 +211,7 @@ function displayCherry() {
     var pos2 = false;
     var pos3 = false;
 
+    // Pick 3 Random Cherry Locations
     while (pos3 == false) {
         var positionY = Math.floor(Math.random() * world.length);
         var positionX = Math.floor(Math.random() * world[positionY].length);
@@ -233,13 +256,32 @@ function displayScore() {
     document.getElementById("score").innerHTML = score;
 }
 
-displayCherry();
+// ! DISPLAY THE LIFE COUNT
+function displayLifeCount() {
+    var lifeOutput = "";
+    if (lifeCount == 3) {
+        lifeOutput +=
+            "<div id='pacman-life'></div><div id='pacman-life'></div><div id='pacman-life'></div>";
+    } else if (lifeCount == 2) {
+        lifeOutput +=
+            "<div id='pacman-life'></div><div id='pacman-life'></div>";
+    } else if (lifeCount == 1) {
+        lifeOutput += "<div id='pacman-life'></div>";
+    } else {
+        lifeOutput = "";
+    }
+    document.getElementById("pacman-life-count").innerHTML = lifeOutput;
+    displayWorld();
+}
+
 displayWorld();
+displayCherry();
 displayPacman();
 displayScore();
+displayLifeCount();
 displayGhost();
 
-// ! MOVEMENT / COLLISION DETECTION / COIN & CHERRY EATING
+// ! MOVEMENT / COLLISION DETECTION / COIN & CHERRY EATING / LIFE LOSS / GAME OVER
 document.onkeydown = function (e) {
     var output = "";
     var pacmanDirection = document.getElementById("pacman");
@@ -263,6 +305,7 @@ document.onkeydown = function (e) {
     if (world[pacman.y][pacman.x] == 1) {
         world[pacman.y][pacman.x] = 0;
         score += 10;
+        coinCount--;
         displayScore();
         displayWorld();
     }
@@ -288,12 +331,36 @@ document.onkeydown = function (e) {
 
     //* GHOST COLLISION & LOSS OF LIFE
     if (pacman.x == ghost.x && pacman.y == ghost.y) {
+        // Reset Position
         pacman.x = 2;
         pacman.y = 13;
         pacmanDirection.style.transform = "rotate(360deg)";
+        // Subtract a Life
         lifeCount--;
+        displayLifeCount();
     }
 
-    // console.log(e.key);
+    //* GAME OVER & RESET BUTTON
+    if (lifeCount == 0) {
+        document.getElementById("game-over-container").innerHTML =
+            "<div id='game-over'>GAME OVER</div> <button id='reset' onclick='resetGame()'>NEW GAME</button>";
+        document.getElementById("container").innerHTML =
+            "<div id='world'></div>";
+        displayWorld();
+    }
+
+    if (score == 2580) {
+        document.getElementById("game-over-container").innerHTML =
+            "<div id='game-over-win'>YOU WIN!</div> <button id='reset' onclick='resetGame()'>NEW GAME</button>";
+        document.getElementById("container").innerHTML =
+            "<div id='world'></div>";
+        displayWorld();
+    }
+
     displayPacman();
 };
+
+// ! GAME RESET
+function resetGame() {
+    document.location.reload();
+}
