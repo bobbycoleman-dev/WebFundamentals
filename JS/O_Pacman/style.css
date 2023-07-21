@@ -3,9 +3,9 @@ body {
     margin: 0;
 }
 
-/* #container {
-    position: relative;
-} */
+#container {
+    margin: 0 auto;
+}
 
 div.row div {
     width: 20px;
@@ -32,7 +32,9 @@ div.coin {
     background-size: 5px;
 }
 
-div.empty {}
+div.empty {
+    display: none;
+}
 
 #pacman {
     background-image: url("./assets/pacman.gif");
@@ -58,8 +60,8 @@ div.empty {}
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 #score {
