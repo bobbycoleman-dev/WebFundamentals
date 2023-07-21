@@ -197,16 +197,32 @@ function displayGhost() {
         for (var i = ghost.y - 1; i <= ghost.y + 1; i++) {
             for (var j = ghost.x - 1; j <= ghost.x + 1; j++) {
                 if (world[i][j] == newCoord) {
-                    if (randXY == 0 && randXYDir == 0) {
+                    if (
+                        randXY == 0 &&
+                        randXYDir == 0 &&
+                        world[ghost.y - 1][ghost.x] != 2
+                    ) {
                         // Y up
                         ghost.y--;
-                    } else if (randXY == 0 && randXYDir == 1) {
+                    } else if (
+                        randXY == 0 &&
+                        randXYDir == 1 &&
+                        world[ghost.y + 1][ghost.x] != 2
+                    ) {
                         // Y down
                         ghost.y++;
-                    } else if (randXY == 1 && randXYDir == 0) {
+                    } else if (
+                        randXY == 1 &&
+                        randXYDir == 0 &&
+                        world[ghost.y][ghost.x + 1] != 2
+                    ) {
                         // X right
                         ghost.x++;
-                    } else if (randXY == 1 && randXYDir == 1) {
+                    } else if (
+                        randXY == 1 &&
+                        randXYDir == 1 &&
+                        world[ghost.y][ghost.x - 1] != 2
+                    ) {
                         // X left
                         ghost.x--;
                     }
@@ -216,7 +232,7 @@ function displayGhost() {
 
         document.getElementById("ghost").style.top = ghost.y * 20 + "px";
         document.getElementById("ghost").style.left = ghost.x * 20 + "px";
-    }, 500);
+    }, 300);
 }
 
 // ! DISPLAY THE CHERRIES
