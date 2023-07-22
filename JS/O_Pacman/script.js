@@ -132,7 +132,7 @@ var pacman = {
 };
 var ghost = {
     x: 13,
-    y: 10
+    y: 13
 };
 var cherryDisplay =
     "<div class='cherry-dark'></div><div class='cherry-dark'></div><div class='cherry-dark'></div>";
@@ -180,59 +180,78 @@ function displayPacman() {
     }
 }
 
+var randDir = 0;
+
 // ! DISPLAY GHOST
 function displayGhost() {
     document.getElementById("ghost").style.top = ghost.y * 20 + "px";
     document.getElementById("ghost").style.left = ghost.x * 20 + "px";
 
-    // Get list of possible directions
-
-    //Randomly increment or decrement x or y in those directions?
-
     setInterval(() => {
-        var newCoord = Math.round(Math.random()); // 0 or 1 -> which world location to go to
-        var randXY = Math.round(Math.random()); // 0 or 1 -> move either X or Y
-        var randXYDir = Math.round(Math.random()); // 0 or 1 -> move up/down or left/right
-
-        for (var i = ghost.y - 1; i <= ghost.y + 1; i++) {
-            for (var j = ghost.x - 1; j <= ghost.x + 1; j++) {
-                if (world[i][j] == newCoord) {
-                    if (
-                        randXY == 0 &&
-                        randXYDir == 0 &&
-                        world[ghost.y - 1][ghost.x] != 2
-                    ) {
-                        // Y up
-                        ghost.y--;
-                    } else if (
-                        randXY == 0 &&
-                        randXYDir == 1 &&
-                        world[ghost.y + 1][ghost.x] != 2
-                    ) {
-                        // Y down
-                        ghost.y++;
-                    } else if (
-                        randXY == 1 &&
-                        randXYDir == 0 &&
-                        world[ghost.y][ghost.x + 1] != 2
-                    ) {
-                        // X right
-                        ghost.x++;
-                    } else if (
-                        randXY == 1 &&
-                        randXYDir == 1 &&
-                        world[ghost.y][ghost.x - 1] != 2
-                    ) {
-                        // X left
-                        ghost.x--;
-                    }
-                }
+        ghost.y--;
+        document.getElementById("ghost").style.top = ghost.y * 20 + "px";
+        document.getElementById("ghost").style.left = ghost.x * 20 + "px";
+        if (world[ghost.y - 1][ghost.x] == 2) {
+            if (world[ghost.y][ghost.x - 1] != 2) {
+                ghost.x--;
+                document.getElementById("ghost").style.top =
+                    ghost.y * 20 + "px";
+                document.getElementById("ghost").style.left =
+                    ghost.x * 20 + "px";
+            } else if (world[ghost.y][ghost.x + 1] != 2) {
+                ghost.x++;
+                document.getElementById("ghost").style.top =
+                    ghost.y * 20 + "px";
+                document.getElementById("ghost").style.left =
+                    ghost.x * 20 + "px";
+            } else if (world[ghost.y + 1][ghost.x] != 2) {
+                ghost.y++;
+                document.getElementById("ghost").style.top =
+                    ghost.y * 20 + "px";
+                document.getElementById("ghost").style.left =
+                    ghost.x * 20 + "px";
             }
         }
 
-        document.getElementById("ghost").style.top = ghost.y * 20 + "px";
-        document.getElementById("ghost").style.left = ghost.x * 20 + "px";
-    }, 300);
+        // randDir = Math.floor(Math.random() * 5);
+        // switch (randDir) {
+        //     case 1:
+        //         if (world[ghost.y - 1][ghost.x] != 2) {
+        //             ghost.y--;
+        //             document.getElementById("ghost").style.top =
+        //                 ghost.y * 20 + "px";
+        //             document.getElementById("ghost").style.left =
+        //                 ghost.x * 20 + "px";
+        //         }
+        //         break;
+        //     case 2:
+        //         if (world[ghost.y + 1][ghost.x] != 2) {
+        //             ghost.y++;
+        //             document.getElementById("ghost").style.top =
+        //                 ghost.y * 20 + "px";
+        //             document.getElementById("ghost").style.left =
+        //                 ghost.x * 20 + "px";
+        //         }
+        //         break;
+        //     case 3:
+        //         if (world[ghost.y][ghost.x + 1] != 2) {
+        //             ghost.x++;
+        //             document.getElementById("ghost").style.top =
+        //                 ghost.y * 20 + "px";
+        //             document.getElementById("ghost").style.left =
+        //                 ghost.x * 20 + "px";
+        //         }
+        //         break;
+        //     case 4:
+        //         if (world[ghost.y][ghost.x - 1] != 2) {
+        //             ghost.x--;
+        //             document.getElementById("ghost").style.top =
+        //                 ghost.y * 20 + "px";
+        //             document.getElementById("ghost").style.left =
+        //                 ghost.x * 20 + "px";
+        //         }
+        // }
+    }, 1000);
 }
 
 // ! DISPLAY THE CHERRIES
