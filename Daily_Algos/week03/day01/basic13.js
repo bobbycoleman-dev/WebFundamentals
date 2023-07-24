@@ -143,12 +143,21 @@ function zeroOutArrayNegativeVals(arr) {
 
 // TODO: Given an array, move all values forward by one index, dropping the first and leaving a '0' value at the end.
 function shiftArrayValsLeft(arr) {
-    for (var i = 0; i < arr.length - 1; i++) {
+    for (var i = 0; i < arr.length; i++) {
         arr[i] = arr[i + 1];
     }
-    arr.pop();
-    arr.push(0);
+    arr[arr.length - 1] = 0;
     console.log(arr);
 }
 
 shiftArrayValsLeft([4, 45, 96, 3, 8, 27, 55]); // [45, 96, 3, 8, 27, 55, 0]
+
+/*
+ar.length = 7
+i = 0, 4 = 45
+i = 1, 45 = 96
+i = 2, 96 = 3
+i = 3, 3 = 8
+i = 4, 8 = 27
+i = 5, 27 = 55 
+*/
