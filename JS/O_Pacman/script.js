@@ -131,7 +131,7 @@ var pacman = {
     y: 13
 };
 var ghost = {
-    x: 13,
+    x: 9,
     y: 13
 };
 var cherryDisplay =
@@ -188,70 +188,70 @@ function displayGhost() {
     document.getElementById("ghost").style.left = ghost.x * 20 + "px";
 
     setInterval(() => {
-        ghost.y--;
-        document.getElementById("ghost").style.top = ghost.y * 20 + "px";
-        document.getElementById("ghost").style.left = ghost.x * 20 + "px";
-        if (world[ghost.y - 1][ghost.x] == 2) {
-            if (world[ghost.y][ghost.x - 1] != 2) {
-                ghost.x--;
-                document.getElementById("ghost").style.top =
-                    ghost.y * 20 + "px";
-                document.getElementById("ghost").style.left =
-                    ghost.x * 20 + "px";
-            } else if (world[ghost.y][ghost.x + 1] != 2) {
-                ghost.x++;
-                document.getElementById("ghost").style.top =
-                    ghost.y * 20 + "px";
-                document.getElementById("ghost").style.left =
-                    ghost.x * 20 + "px";
-            } else if (world[ghost.y + 1][ghost.x] != 2) {
-                ghost.y++;
-                document.getElementById("ghost").style.top =
-                    ghost.y * 20 + "px";
-                document.getElementById("ghost").style.left =
-                    ghost.x * 20 + "px";
-            }
-        }
-
-        // randDir = Math.floor(Math.random() * 5);
-        // switch (randDir) {
-        //     case 1:
-        //         if (world[ghost.y - 1][ghost.x] != 2) {
-        //             ghost.y--;
-        //             document.getElementById("ghost").style.top =
-        //                 ghost.y * 20 + "px";
-        //             document.getElementById("ghost").style.left =
-        //                 ghost.x * 20 + "px";
-        //         }
-        //         break;
-        //     case 2:
-        //         if (world[ghost.y + 1][ghost.x] != 2) {
-        //             ghost.y++;
-        //             document.getElementById("ghost").style.top =
-        //                 ghost.y * 20 + "px";
-        //             document.getElementById("ghost").style.left =
-        //                 ghost.x * 20 + "px";
-        //         }
-        //         break;
-        //     case 3:
-        //         if (world[ghost.y][ghost.x + 1] != 2) {
-        //             ghost.x++;
-        //             document.getElementById("ghost").style.top =
-        //                 ghost.y * 20 + "px";
-        //             document.getElementById("ghost").style.left =
-        //                 ghost.x * 20 + "px";
-        //         }
-        //         break;
-        //     case 4:
-        //         if (world[ghost.y][ghost.x - 1] != 2) {
-        //             ghost.x--;
-        //             document.getElementById("ghost").style.top =
-        //                 ghost.y * 20 + "px";
-        //             document.getElementById("ghost").style.left =
-        //                 ghost.x * 20 + "px";
-        //         }
+        // ghost.y--;
+        // document.getElementById("ghost").style.top = ghost.y * 20 + "px";
+        // document.getElementById("ghost").style.left = ghost.x * 20 + "px";
+        // if (world[ghost.y - 1][ghost.x] == 2) {
+        //     if (world[ghost.y][ghost.x - 1] != 2) {
+        //         ghost.x--;
+        //         document.getElementById("ghost").style.top =
+        //             ghost.y * 20 + "px";
+        //         document.getElementById("ghost").style.left =
+        //             ghost.x * 20 + "px";
+        //     } else if (world[ghost.y][ghost.x + 1] != 2) {
+        //         ghost.x++;
+        //         document.getElementById("ghost").style.top =
+        //             ghost.y * 20 + "px";
+        //         document.getElementById("ghost").style.left =
+        //             ghost.x * 20 + "px";
+        //     } else if (world[ghost.y + 1][ghost.x] != 2) {
+        //         ghost.y++;
+        //         document.getElementById("ghost").style.top =
+        //             ghost.y * 20 + "px";
+        //         document.getElementById("ghost").style.left =
+        //             ghost.x * 20 + "px";
+        //     }
         // }
-    }, 1000);
+
+        randDir = Math.floor(Math.random() * 5);
+        switch (randDir) {
+            case 1:
+                if (world[ghost.y - 1][ghost.x] != 2) {
+                    ghost.y--;
+                    document.getElementById("ghost").style.top =
+                        ghost.y * 20 + "px";
+                    document.getElementById("ghost").style.left =
+                        ghost.x * 20 + "px";
+                }
+                break;
+            case 2:
+                if (world[ghost.y + 1][ghost.x] != 2) {
+                    ghost.y++;
+                    document.getElementById("ghost").style.top =
+                        ghost.y * 20 + "px";
+                    document.getElementById("ghost").style.left =
+                        ghost.x * 20 + "px";
+                }
+                break;
+            case 3:
+                if (world[ghost.y][ghost.x + 1] != 2) {
+                    ghost.x++;
+                    document.getElementById("ghost").style.top =
+                        ghost.y * 20 + "px";
+                    document.getElementById("ghost").style.left =
+                        ghost.x * 20 + "px";
+                }
+                break;
+            case 4:
+                if (world[ghost.y][ghost.x - 1] != 2) {
+                    ghost.x--;
+                    document.getElementById("ghost").style.top =
+                        ghost.y * 20 + "px";
+                    document.getElementById("ghost").style.left =
+                        ghost.x * 20 + "px";
+                }
+        }
+    }, 300);
 }
 
 // ! DISPLAY THE CHERRIES
