@@ -18,38 +18,31 @@ const arr5 = [];
 const idx5 = 2;
 const expected5 = null;
 
+// function nthLast(items, nthToLast) {
+// 	var output = "";
+// 	if (items.length > 0) {
+// 		if (items[items.length - nthToLast] === undefined) {
+// 			output = null;
+// 		} else {
+// 			output = items[items.length - nthToLast];
+// 		}
+// 	} else {
+// 		output = null;
+// 	}
+// 	console.log(output);
+// }
+
 function nthLast(items, nthToLast) {
 	var output = "";
-	if (items.length > 0) {
-		for (i = items.length - 1; i >= 0; i--) {
-			if (items[items.length - nthToLast] === undefined) {
-				output = null;
-			} else {
-				output = items[items.length - nthToLast];
-			}
-		}
+	if ((output = items[items.length - nthToLast])) {
 	} else {
 		output = null;
 	}
 	console.log(output);
 }
 
-function nthLastNoLoop(items, nthToLast) {
-	var output = "";
-	if (items.length > 0) {
-		if (items[items.length - nthToLast] === undefined) {
-			output = null;
-		} else {
-			output = items[items.length - nthToLast];
-		}
-	} else {
-		output = null;
-	}
-	console.log(output);
-}
-
-nthLastNoLoop(arr1, idx1);
-nthLastNoLoop(arr2, idx2);
-nthLastNoLoop(arr3, idx3);
-nthLastNoLoop(arr4, idx4);
-nthLastNoLoop(arr5, idx5);
+nthLast(arr1, idx1);
+nthLast(arr2, idx2);
+nthLast(arr3, idx3);
+nthLast(arr4, idx4);
+nthLast(arr5, idx5);
