@@ -34,8 +34,22 @@ function nthLast(items, nthToLast) {
 	console.log(output);
 }
 
-nthLast(arr1, idx1);
-nthLast(arr2, idx2);
-nthLast(arr3, idx3);
-nthLast(arr4, idx4);
-nthLast(arr5, idx5);
+function nthLastNoLoop(items, nthToLast) {
+	var output = "";
+	if (items.length > 0) {
+		if (items[items.length - nthToLast] === undefined) {
+			output = null;
+		} else {
+			output = items[items.length - nthToLast];
+		}
+	} else {
+		output = null;
+	}
+	console.log(output);
+}
+
+nthLastNoLoop(arr1, idx1);
+nthLastNoLoop(arr2, idx2);
+nthLastNoLoop(arr3, idx3);
+nthLastNoLoop(arr4, idx4);
+nthLastNoLoop(arr5, idx5);
