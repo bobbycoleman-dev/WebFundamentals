@@ -34,4 +34,8 @@ function nthLast(items, nthToLast) {
 	console.log(output);
 }
 
+nthLast(arr1, idx1);
+nthLast(arr2, idx2);
+nthLast(arr3, idx3);
+nthLast(arr4, idx4);
 nthLast(arr5, idx5);
