@@ -20,7 +20,8 @@ const expected5 = null;
 
 function nthLast(items, nthToLast) {
 	var output = "";
-	if ((output = items[items.length - nthToLast])) {
+	if (items[items.length - nthToLast] != undefined) {
+		output = items[items.length - nthToLast];
 	} else {
 		output = null;
 	}
