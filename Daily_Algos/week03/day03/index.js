@@ -18,20 +18,6 @@ const arr5 = [];
 const idx5 = 2;
 const expected5 = null;
 
-// function nthLast(items, nthToLast) {
-// 	var output = "";
-// 	if (items.length > 0) {
-// 		if (items[items.length - nthToLast] === undefined) {
-// 			output = null;
-// 		} else {
-// 			output = items[items.length - nthToLast];
-// 		}
-// 	} else {
-// 		output = null;
-// 	}
-// 	console.log(output);
-// }
-
 function nthLast(items, nthToLast) {
 	var output = "";
 	if ((output = items[items.length - nthToLast])) {
